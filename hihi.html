@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <title>sana masagot</title>
+    <style>
+        body {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+            text-align: center;
+        }
+        #question {
+            margin-top: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 45px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="question">
+        <h2>Tanga ba si shaira</h2>
+        <button id="noButton">no</button>
+        <button id="yesButton">yes</button>
+    </div>
+    
+    <div id="response" style="display: none;">
+        <h2></h2>
+        <p id="loveMessage"></p>
+    </div>
+
+    <Script>
+        const noButton = document.getElementById('noButton');
+        const yesButoon = document.getElementById('yesButton');
+        const questionDiv = document.getElementById('question');
+        const responseDiv = document.getElementById('response');
+        const loveMessage = document.getElementById('loveMessage');
+
+    noButton.addEventListener('click', function() {
+        questionDiv.style.display = 'none';
+        responseDiv.style.display = 'block';
+        loveMessage.textContent = "mali dapat oo hmp...";
+    });
+
+    yesButoon.addEventListener('click', function() {
+        questionDiv.style.display = 'none';
+        responseDiv.style.display = 'block';
+        loveMessage.textContent = "tama yan loveu";
+    });
+    </script>
+</body>
+</html>
